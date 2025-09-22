@@ -2,51 +2,76 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    padding: 0%;
-
 }
+
 .grid-container{
     display: grid;
-    grid-template-rows: 450px 3fr;
-    border: 2px solid red;
-    background-color: deepskyblue;
-  
-    /* grid-track-rows: 450px 3fr; */
-}
-.grid-container2{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    border: 2px solid green;
-    height: 319px;
-   column-gap:5px;
-    padding: 10px;
-    
-}
-.grid-container-item{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    border: 2px solid green;
-    height: 300px;
-    /* gap: 10px; */
-    padding: 10px;
-    border-radius: 20px;
-   
-}
-.gridborder{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 5px;
+    border-radius: 2px;
     border: 2px solid black;
+    border-color: blue;
+    text-align: center;
+    height: 100vh;
 }
-.grid-container-columns{
+.grid-item{
+    background-color: lightblue;
   
-    grid-template-columns: 1fr 1fr;
-    border: 2px solid blue;
-   grid
+
+    height: 100%;
+    padding: 10px;
+    grid-column: 1 / 3;
+    grid-row: 1/3;
+    border-radius: 20px;
+
+}
+.item2{
+    background-color: lightgreen;
+    grid-column: 1/ 2;
+    grid-row: 3;
+    border-radius: 20px;
+    /* grid-row: 1 / 2; */
+}
+
+.item3{
+    background-color: lightcoral;
+    grid-row: 3;
+    border-radius: 20px;
 }
 .circle{
     width: 200px;
     height: 200px;
-    border-radius: 50%;
-    border: 2px solid black;
-    /* margin-top: 50px; */
-    padding: 30px 30px 30px 30px
-    /* margin-left: 100px; */
+    background-color: white;
+    border-radius: 50%; 
+    margin: 150px 150px 
+
 }
+.text{
+    font-size: 20px;
+    font-weight: lighter;
+    margin-left: 400px;
+
+    padding: 20px;
+    border-color: crimson;
+    text-align: left;
+    /* transform: translateX(-40px); */
+    transform: translateY(-370px);
+   
+
+   
+    
+ 
+  
+   
+    
+}
+.circle img {
+    object-fit: cover; /* ensures image fills circle */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* makes image circular */
+}
+
+
